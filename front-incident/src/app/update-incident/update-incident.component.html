@@ -1,0 +1,224 @@
+<div class="row">
+  <div class="card col-md-6 offset-md-3 offset-md-3">
+      <div class="row">
+          <h3 class="text-center"> Update Incident </h3>
+          <hr />
+          <div class="card-body">
+              <form (ngSubmit)="onSubmit()">
+                  <div class="form-group">
+                      <label> incidentType</label>
+                  <select class="form-control" aria-label="Default select example" [(ngModel)]="incident.incidentType"
+                  name="incidentType">
+                      <option selected> </option>
+                      <option value="Major incident">Major incident</option>
+                      <option value="Minor Incident">Minor Incident</option>
+                    </select>
+                    </div>
+                
+                  <div class="form-group">
+                      <label> date</label>
+                      <input type="date" class="form-control" id="date" [(ngModel)]="incident.date"
+                          name="date">
+                  </div>
+                  <div class="form-group">
+                      <label> title</label>
+                      <input type="text" class="form-control" id="title" [(ngModel)]="incident.title"
+                          name="title">
+                  </div>
+                  <div class="form-group">
+                      <label> severityLevel</label>
+                  <select class="form-control" aria-label="Default select example" [(ngModel)]="incident.severityLevel"
+                  name="severityLevel">
+                      <option selected> </option>
+                      <option value="Informational">Informational</option>
+                      <option value="Low">Low</option>
+                      <option value="Medium">Medium</option>
+                      <option value="High">High</option>
+                      <option value="Critical">Critical</option>
+                    </select>
+                    </div>
+                    <div class="form-group">
+                      <label> category</label>
+                  <select class="form-control" aria-label="Default select example" [(ngModel)]="incident.category"
+                  name="category">
+                      <option selected> </option>
+                      <option value="Application">Application</option>
+                      <option value="Email">Email</option>
+                      
+                    </select>
+                    </div>
+                    <div class="form-group">
+                      <label>  incidentID</label>
+                      <input type="text" class="form-control" id="incidentID" [(ngModel)]="incident.incidentID"
+                          name="incidentID">
+                  </div>
+                    <div class="form-group">
+                      <label> ticketRaised</label>
+                  <select class="form-control" aria-label="Default select example" [(ngModel)]="incident.ticketRaised"
+                  name="ticketRaised">
+                      <option selected> </option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                      
+                    </select>
+                    </div>
+                    <div class="form-group">
+                      <label> plantName</label>
+                  <select class="form-control" aria-label="Default select example" [(ngModel)]="incident.plantName"
+                  name="plantName">
+                      <option selected> </option>
+                      <option value="COFMA">COFMA</option>
+                      <option value="COFKT">COFKT</option>
+                      <option value="COFMD">COFMD</option>
+                      <option value="COFTN">COFTN</option>
+                      <option value="COFSHA">COFSHA</option>
+                      <option value="COFTJ">COFTJ</option>
+                      <option value="COFTT">COFTT</option>
+                      <option value="COFDE">COFDE</option>
+                      <option value="COFGR">COFGR</option>
+                      <option value="COFPT">COFPT</option>
+                      <option value="COFCJ">COFCJ</option>
+                      <option value="COFHN">COFHN</option>
+                      <option value="COFLE">COFLE</option>
+                      <option value="COFMT">COFMT</option>
+                      <option value="COFMX">COFMX</option>
+                      <option value="COFUS">COFUS</option>
+                      <option value="COFEE">COFEE</option>
+                      <option value="COFMK">COFMK</option>
+                      <option value="COFPL">COFPL</option>
+                      <option value="CHAKIRA">CHAKIRA</option>
+                      <option value="COFRS">COFRS</option>
+                      <option value="CORPORATE">CORPORATE</option>
+
+                    </select>
+                    </div>
+                    <div class="form-group">
+                      <label> raisedBy</label>
+                  <select class="form-control" aria-label="Default select example" [(ngModel)]="incident.raisedBy"
+                  name="raisedBy">
+                      <option selected> </option>
+                      <option value="Crowdstrike">Crowdstrike</option>
+                      <option value="Proofpoint">Proofpoint</option>
+                      <option value="Siem">Siem</option>
+                      <option value="FortiAnalyser">FortiAnalyser</option>
+                      <option value="MicrosoftDefender">MicrosoftDefender</option>
+                      <option value="Azure">Azure</option>
+                      
+                    </select>
+                    </div>
+                    <div class="form-group">
+                      <label> hostName </label>
+                      <input type="text" class="form-control" id="hostName" [(ngModel)]="incident.hostName"
+                          name="hostName">
+                  </div>
+                  <div class="form-group">
+                      <label> userName </label>
+                      <input type="text" class="form-control" id="userName" [(ngModel)]="incident.userName"
+                          name="userName">
+                  </div>
+                    <div class="form-group">
+                      <label> hostStatus</label>
+                  <select class="form-control" aria-label="Default select example" [(ngModel)]="incident.hostStatus"
+                  name="hostStatus">
+                      <option selected> </option>
+                      <option value="Contained">Contained</option>
+                      <option value="NOT-Contained">NOT-Contained</option>
+                    </select>
+                    </div>
+                  
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Investigation</label>
+                      <textarea class="form-control" id="investigation"  rows="3"  [(ngModel)]="incident.investigation" name="investigation" ></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Remediation</label>
+                      <textarea class="form-control" id="remediation"  rows="3"  [(ngModel)]="incident.remediation" name="remediation" ></textarea>
+                    </div>
+                  <div class="form-group">
+                      <label> firstEvent </label>
+                      <input type="text" class="form-control" id="userName" [(ngModel)]="incident.firstEvent"
+                          name="firstEvent">
+                  </div>
+                  <div class="form-group">
+                      <label> acknowledge </label>
+                      <input type="text" class="form-control" id="userName" [(ngModel)]="incident.acknowledge"
+                          name="acknowledge">
+                  </div>
+                  <div class="form-group">
+                      <label> timeAnalyse </label>
+                      <input type="number" class="form-control" id="userName" [(ngModel)]="incident.timeAnalyse"
+                          name="timeAnalyse">
+                  </div>
+                  
+                  <div class="form-group">
+                      <label> analyst</label>
+                  <select class="form-control" aria-label="Default select example"[(ngModel)]="incident.analyst"
+                  name="analyst">
+                      <option selected> </option>
+                      <option value="Oussema DOUGGUI">Oussema DOUGGUI</option>
+                      <option value="Amal BELAID">Amal BELAID</option>
+                      <option value="Souhail DAKHLAOUI">Souhail DAKHLAOUI</option>
+                      <option value="Rami MANSOURI">Rami MANSOURI</option>
+                      
+                    </select>
+                    </div>
+                    <div class="form-group">
+                      <label> Reviewer </label>
+                      <input type="text" class="form-control" id="userName" [(ngModel)]="incident.reviewer"
+                          name="Reviewer">
+                  </div>
+                  <div class="form-group">
+                      <label> remediationOwner </label>
+                      <input type="text" class="form-control" id="userName" [(ngModel)]="incident.remediationOwner"
+                          name="remediationOwner">
+                  </div>
+                  <div class="form-group">
+                      <label> dateTarget </label>
+                      <input type="date" class="form-control" id="userName" [(ngModel)]="incident.dateTarget"
+                          name="dateTarget">
+                  </div>
+
+
+                    <div class="form-group">
+                      <label> escalation</label>
+                  <select class="form-control" aria-label="Default select example" [(ngModel)]="incident.escalation"
+                  name="escalation">
+                      <option selected> </option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                      
+                    </select>
+                    </div>
+                    <div class="form-group">
+                      <label> incidentStatus</label>
+                  <select class="form-control" aria-label="Default select example" [(ngModel)]="incident.incidentStatus"
+                  name="incidentStatus">
+                      <option selected> </option>
+                      <option value="Open">Open</option>
+                      <option value="Closed">Closed</option>
+                      
+                    </select>
+                    </div>
+                    <div class="form-group">
+                      <label> falsePositive</label>
+                  <select class="form-control" aria-label="Default select example" [(ngModel)]="incident.falsePositive"
+                  name="falsePositive">
+                      <option selected> </option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                      
+                    </select>
+                    </div>
+                  
+
+               
+
+                  <br />
+                  <button class="btn btn-success" type="submit">update</button>
+
+
+              </form>
+          </div>
+      </div>
+  </div>
+</div>

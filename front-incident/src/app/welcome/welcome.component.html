@@ -1,0 +1,17 @@
+
+
+
+    <mat-drawer-container>
+        <mat-drawer mode="side" [opened]="sideBarOpen">
+            <app-sidebar></app-sidebar>
+          </mat-drawer>
+        <mat-drawer-content>
+          <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+         <!-- <div> <video autoplay muted loop id="myVideo">
+
+            <source src="./assets/codicab.mp4" type="video/mp4">
+        </video>
+      </div> -->
+        </mat-drawer-content>
+      
+      </mat-drawer-container>

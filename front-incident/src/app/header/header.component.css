@@ -1,0 +1,50 @@
+mat-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+   background: linear-gradient(#000168,rgb(49, 20, 211), #000168);
+
+   /* background: rgba(0,0,0,0.5); */
+  }
+  button {
+    outline: none;
+    border: 0;
+    background: transparent;
+  }
+  .form{
+
+    position: relative;
+}
+
+.mat-icon{
+
+  
+  color: #9ca3af;
+
+}
+
+
+.form .mat-icon{
+
+    position: absolute;
+    top:20px;
+    left: 20px;
+    color: #9ca3af;
+
+}
+
+
+
+.form-input{
+
+    height: 55px;
+    text-indent: 33px;
+    border-radius: 10px;
+}
+
+.form-input:focus{
+
+    box-shadow: none;
+    border:none;
+}
+  
